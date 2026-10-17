@@ -6,5 +6,116 @@
     <title>GreenRead</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="portal-header">
+      <div class="header-content">
+        <div class="brand">
+          <span class="brand-icon">♻️</span>
+          <h1>GreenRead <span class="brand-sub">Sensor Logger</span></h1>
+          <div class="header-status">
+            Bays Logged: <span id="queue-count" class="badge-count">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="portal-container">
+      <aside class="panel form-panel">
+        <h2 class="panel-title">Record Sensor Data</h2>
+        <div
+          id="form-error-panel"
+          class="alert alert-danger hidden"
+          role="alert"
+        ></div>
+
+        <form action="#" id="sensor-form" novalidate>
+          <div class="form-group">
+            <label for="bay-name" class="form-label"
+              >Bay Name <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              name="bay-name"
+              id="bay-name"
+              class="form-control"
+              placeholder="e.g. Bay 4"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ph" class="form-label"
+                >pH (0-14) <span class="required">*</span></label
+              >
+              <input
+                type="number"
+                name="ph"
+                id="ph"
+                class="form-control"
+                min="0"
+                max="14"
+                placeholder="8"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="ec" class="form-label"
+                >Electrical Conductivity (S/m) <span class="required">*</span></label
+              >
+              <input
+                type="number"
+                name="ec"
+                id="ec"
+                class="form-control"
+                min="40"
+                max="150"
+                placeholder="80"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="temp" class="form-label"
+                >Temperature (C) <span class="required">*</span></label
+              >
+              <input
+                type="number"
+                name="temp"
+                id="temp"
+                class="form-control"
+                min="0"
+                max="240"
+                placeholder="72"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="hm" class="form-label"
+                >Humidity (%) <span class="required">*</span></label
+              >
+              <input
+                type="number"
+                name="hm"
+                id="hm"
+                class="form-control"
+                min="0"
+                max="100"
+                placeholder="47"
+                required
+              />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            id="btn-submit"
+            class="btn btn-primary btn-block"
+          >
+            Log Sensor Record
+          </button>
+        </form>
+      </aside>
+  </body>
 </html>
