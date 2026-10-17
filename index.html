@@ -61,7 +61,8 @@
             </div>
             <div class="form-group">
               <label for="ec" class="form-label"
-                >Electrical Conductivity (S/m) <span class="required">*</span></label
+                >Electrical Conductivity (S/m)
+                <span class="required">*</span></label
               >
               <input
                 type="number"
@@ -117,5 +118,29 @@
           </button>
         </form>
       </aside>
+
+      <section class="panel records-panel">
+        <div class="records-header">
+          <h2 class="panel-title">Sensor Queue</h2>
+          <button id="btn-clear-all" class="btn btn-outline-danger btn-sm">
+            Purge Queue
+          </button>
+        </div>
+
+        <div id="empty-state" class="empty-state">
+          <span class="empty-icon">📋</span>
+          <p>No active sensor records.</p>
+        </div>
+
+        <ul id="records-list" class="records-grid" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <footer class="portal-footer">
+      <p>&copy; 2026 CSI 3150 Project 2</p>
+    </footer>
+
+    <!-- integrate the JS file here -->
+    <script src="app.js" defer></script>
   </body>
 </html>
