@@ -215,7 +215,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* RECORDS PANEL & DYNAMIC CARDS */
 .records-header {
   display: flex;
   justify-content: space-between;
@@ -240,6 +239,19 @@ body {
   flex-direction: column;
   gap: 0.75rem;
   position: relative;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.sensor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  background-color: #304d40;
+  border-color: var(--primary);
 }
 
 .sensor-card.status-critical {
