@@ -40,14 +40,14 @@
 
   function evaluateRisk(ph, ec, temp, hm) {
     if (ph >= 12 || ec >= 120 || temp >= 200 || hm >= 80) {
-      return { level: "Critical", label: "Critical" };
+      return { level: "critical", label: "Critical" };
     }
 
-    if (ph >= 10 || ec >= 90 || temp >= 160 || hm < 65) {
-      return { level: "Elevated", label: "Elevated" };
+    if (ph >= 10 || ec >= 90 || temp >= 160 || hm > 50) {
+      return { level: "elevated", label: "Elevated" };
     }
 
-    return { level: "Normal", label: "Normal" };
+    return { level: "normal", label: "Normal" };
   }
 
   function validateInput(data) {
